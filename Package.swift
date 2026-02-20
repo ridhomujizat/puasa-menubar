@@ -27,6 +27,7 @@ let package = Package(
                 "Models/PrayerTimesModel.swift",
                 "Services/APIService.swift",
                 "Services/LocationManager.swift",
+                "Services/NotificationService.swift",
                 "Services/PrayerTimesViewModel.swift",
                 "Utils/Colors.swift",
                 "Views/MenuBarExtra.swift",

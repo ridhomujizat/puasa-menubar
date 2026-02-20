@@ -37,6 +37,13 @@
     "swift-dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.swiftdeps",
     "diagnostics": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.dia"
   },
+  "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/NotificationService.swift": {
+    "dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.d",
+    "object": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.swift.o",
+    "swiftmodule": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService~partial.swiftmodule",
+    "swift-dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.swiftdeps",
+    "diagnostics": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.dia"
+  },
   "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift": {
     "dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.d",
     "object": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o",

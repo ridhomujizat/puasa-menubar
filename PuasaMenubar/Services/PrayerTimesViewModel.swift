@@ -9,9 +9,13 @@ class PrayerTimesViewModel: ObservableObject {
     @Published var timeUntilNextPrayer: String?
     @Published var currentDate: Date = Date()
 
+    static let shared = PrayerTimesViewModel()
+    
     private let apiService = APIService.shared
+    private let notificationService = NotificationService.shared
     private var updateTimer: Timer?
     private var nextPrayerDate: Date?
+    private var lastNotifiedPrayer: String?
 
     // Cached once — DateFormatter is expensive to create
     private let timeFormatter: DateFormatter = {
@@ -114,10 +118,23 @@ class PrayerTimesViewModel: ObservableObject {
         let s = Int(remaining) % 60
         timeUntilNextPrayer = String(format: "%02d:%02d:%02d", h, m, s)
 
-        // When the countdown hits zero, re-compute which prayer is next.
+        // When the countdown hits zero, send notification and re-compute
         if remaining == 0 {
+            sendNotificationIfNeeded()
             computeNextPrayer()
         }
+    }
+    
+    private func sendNotificationIfNeeded() {
+        guard notificationService.isNotificationEnabled,
+              let prayer = nextPrayer,
+              prayer != lastNotifiedPrayer,
+              let timings = prayerTimesData?.timings,
+              let prayerTime = timings.allPrayerTimes().first(where: { $0.name == prayer })?.time
+        else { return }
+        
+        notificationService.sendPrayerNotification(prayerName: prayer, prayerTime: prayerTime)
+        lastNotifiedPrayer = prayer
     }
 
     private func startTimer() {

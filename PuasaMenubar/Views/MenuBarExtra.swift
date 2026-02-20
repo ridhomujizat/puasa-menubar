@@ -4,6 +4,7 @@ import AppKit
 struct MenuBarExtraView: View {
     @StateObject private var viewModel = PrayerTimesViewModel()
     @StateObject private var locationManager = LocationManager()
+    @StateObject private var notificationService = NotificationService.shared
 
     var body: some View {
         VStack(spacing: 0) {
@@ -20,7 +21,7 @@ struct MenuBarExtraView: View {
             } else if viewModel.errorMessage != nil && viewModel.prayerTimesData == nil {
                 ErrorStateView(message: viewModel.errorMessage ?? "Unknown error", onRetry: fetchByLocation)
             } else {
-                MainContentView(viewModel: viewModel)
+                MainContentView(viewModel: viewModel, notificationService: notificationService)
             }
         }
         .frame(width: 300)
@@ -208,10 +209,51 @@ private struct DateFooterView: View {
     }
 }
 
+// MARK: - Notification Settings
+
+private struct NotificationSettingsView: View {
+    @ObservedObject var notificationService: NotificationService
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: notificationService.isNotificationEnabled ? "bell.fill" : "bell.slash.fill")
+                .foregroundStyle(notificationService.isNotificationEnabled ? Color.ramadanGreen : .secondary)
+                .font(.system(size: 12))
+
+            Text("Notifications")
+                .font(.system(size: 11))
+                .foregroundStyle(.secondary)
+
+            Spacer()
+
+            Toggle("", isOn: $notificationService.isNotificationEnabled)
+                .onChange(of: notificationService.isNotificationEnabled) { _, newValue in
+                    notificationService.toggleNotifications(enabled: newValue)
+                }
+                .toggleStyle(.switch)
+                .scaleEffect(0.8)
+
+            if !notificationService.hasPermission {
+                Button("Allow") {
+                    notificationService.requestPermission()
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.mini)
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
+        .background(Color.ramadanGreen.opacity(0.04), in: .rect(cornerRadius: 8))
+        .padding(.horizontal, 16)
+        .padding(.bottom, 6)
+    }
+}
+
 // MARK: - Main Content
 
 private struct MainContentView: View {
     @ObservedObject var viewModel: PrayerTimesViewModel
+    @ObservedObject var notificationService: NotificationService
 
     var body: some View {
         VStack(spacing: 0) {
@@ -237,6 +279,8 @@ private struct MainContentView: View {
 
             Divider()
                 .padding(.horizontal, 16)
+
+            NotificationSettingsView(notificationService: notificationService)
 
             if let dateInfo = viewModel.prayerTimesData?.date {
                 DateFooterView(dateInfo: dateInfo)

@@ -44,6 +44,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/NotificationService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift"
         },
         {
@@ -80,6 +84,7 @@
         "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PuasaMenubarApp.swift.o",
         "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/APIService.swift.o",
         "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.swift.o",
+        "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.swift.o",
         "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o",
         "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/Colors.swift.o",
         "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o",
@@ -154,6 +159,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o"
         },
         {
@@ -184,6 +193,7 @@
         "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/PuasaMenubarApp.swift",
         "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/APIService.swift",
         "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/LocationManager.swift",
+        "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/NotificationService.swift",
         "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift",
         "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Utils/Colors.swift",
         "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/MenuBarExtra.swift",
@@ -210,6 +220,7 @@
       "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/PuasaMenubarApp.swift",
       "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/APIService.swift",
       "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/LocationManager.swift",
+      "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/NotificationService.swift",
       "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift",
       "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Utils/Colors.swift",
       "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/MenuBarExtra.swift",
@@ -323,6 +334,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/NotificationService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift"
         },
         {
@@ -370,6 +385,10 @@
         {
           "kind" : "file",
           "name" : "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/NotificationService.swift.o"
         },
         {
           "kind" : "file",

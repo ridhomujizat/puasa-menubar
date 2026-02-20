@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct PuasaMenubarApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+
     var body: some Scene {
         MenuBarExtra {
             MenuBarExtraView()
@@ -19,8 +19,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Activate the app so it can show permission dialogs
         NSApp.setActivationPolicy(.accessory)
         NSApp.activate(ignoringOtherApps: true)
+        
+        // Request notification permission
+        NotificationService.shared.requestPermission()
     }
-    
+
     func applicationWillBecomeActive(_ notification: Notification) {
         NSApp.activate(ignoringOtherApps: true)
     }

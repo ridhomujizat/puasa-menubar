@@ -9,7 +9,7 @@ struct PrayerTimesView: View {
         NavigationView {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.purple.opacity(0.1)]),
+                    gradient: Gradient(colors: [Color.ramadanGreenLight, Color.ramadanGreen.opacity(0.05)]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
@@ -22,6 +22,7 @@ struct PrayerTimesView: View {
                     }
                 }
                 .padding()
+                .background(.thinMaterial)
             }
             .navigationTitle("Prayer Times")
             .toolbar {
@@ -81,7 +82,7 @@ struct PrayerTimesView: View {
         VStack(spacing: 4) {
             HStack {
                 Image(systemName: "location.fill")
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(.ramadanGreen)
                 Text(locationManager.cityName)
                     .font(.headline)
                 if !locationManager.countryName.isEmpty && locationManager.countryName != "Unknown" {
@@ -98,7 +99,7 @@ struct PrayerTimesView: View {
             }
         }
         .padding()
-        .background(Color(.textBackgroundColor))
+        .background(.thinMaterial)
         .cornerRadius(12)
         .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
     }
@@ -112,7 +113,7 @@ struct PrayerTimesView: View {
             if let nextPrayer = viewModel.nextPrayer {
                 Text(nextPrayer)
                     .font(.system(size: 32, weight: .bold, design: .rounded))
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(.ramadanGreen)
             }
             
             if let timeUntil = viewModel.timeUntilNextPrayer {
@@ -123,7 +124,7 @@ struct PrayerTimesView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.accentColor.opacity(0.1))
+        .background(.thinMaterial)
         .cornerRadius(16)
     }
     
@@ -148,7 +149,7 @@ struct PrayerTimesView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color(.textBackgroundColor))
+                .background(.thinMaterial)
                 .cornerRadius(12)
             }
         }
@@ -190,7 +191,7 @@ struct PrayerTimesView: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 30)
                     .padding(.vertical, 15)
-                    .background(Color.accentColor)
+                    .background(Color.ramadanGreen)
                     .cornerRadius(12)
             }
             
@@ -199,7 +200,7 @@ struct PrayerTimesView: View {
             }) {
                 Text("Open Settings")
                     .font(.subheadline)
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(.ramadanGreen)
             }
         }
         .padding()
@@ -248,7 +249,7 @@ struct ErrorView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color(.textBackgroundColor))
+        .background(.thinMaterial)
         .cornerRadius(12)
     }
 }

@@ -44,6 +44,13 @@
     "swift-dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swiftdeps",
     "diagnostics": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.dia"
   },
+  "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Utils/Colors.swift": {
+    "dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/Colors.d",
+    "object": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/Colors.swift.o",
+    "swiftmodule": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/Colors~partial.swiftmodule",
+    "swift-dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/Colors.swiftdeps",
+    "diagnostics": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/Colors.dia"
+  },
   "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/MenuBarExtra.swift": {
     "dependencies": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.d",
     "object": "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o",

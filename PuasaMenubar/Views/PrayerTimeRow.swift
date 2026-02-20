@@ -3,37 +3,31 @@ import SwiftUI
 struct PrayerTimeRow: View {
     let prayerTime: PrayerTime
     let isNextPrayer: Bool
-    
+
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             Text(prayerTime.icon)
-                .font(.title3)
-                .frame(width: 30)
-            
+                .font(.system(size: 14))
+                .frame(width: 22)
+
             Text(prayerTime.name)
-                .font(.caption)
-                .fontWeight(.medium)
-                .foregroundColor(.primary)
-            
+                .font(.system(size: 13, weight: isNextPrayer ? .semibold : .regular))
+                .foregroundStyle(isNextPrayer ? Color.primary : Color.secondary)
+
             Spacer()
-            
+
             Text(prayerTime.formattedTime)
-                .font(.caption)
-                .fontWeight(.semibold)
-                .monospacedDigit()
-                .foregroundColor(isNextPrayer ? .white : .secondary)
-            
-            if isNextPrayer {
-                Image(systemName: "circle.fill")
-                    .font(.caption2)
-                    .foregroundColor(.accentColor)
-            }
+                .font(.system(size: 13, weight: isNextPrayer ? .semibold : .regular).monospacedDigit())
+                .foregroundStyle(isNextPrayer ? Color.ramadanGreen : Color.secondary)
+
+            Circle()
+                .fill(Color.ramadanGreen)
+                .frame(width: 6, height: 6)
+                .opacity(isNextPrayer ? 1 : 0)
         }
-        .padding(.horizontal, 10)
+        .padding(.horizontal, 12)
         .padding(.vertical, 8)
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .fill(isNextPrayer ? Color.accentColor : Color.gray.opacity(0.1))
-        )
+        .background(Color.ramadanGreen.opacity(isNextPrayer ? 0.06 : 0), in: .rect(cornerRadius: 10))
+        .animation(.easeInOut(duration: 0.2), value: isNextPrayer)
     }
 }

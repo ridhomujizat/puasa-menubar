@@ -53,7 +53,6 @@ struct Timings: Codable {
             PrayerTime(name: "Sunrise", time: Sunrise, icon: "🌄"),
             PrayerTime(name: "Dhuhr", time: Dhuhr, icon: "☀️"),
             PrayerTime(name: "Asr", time: Asr, icon: "🌤️"),
-            PrayerTime(name: "Sunset", time: Sunset, icon: "🌅"),
             PrayerTime(name: "Maghrib", time: Maghrib, icon: "🌆"),
             PrayerTime(name: "Isha", time: Isha, icon: "🌙"),
             PrayerTime(name: "Imsak", time: Imsak, icon: "🤲")

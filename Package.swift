@@ -20,7 +20,7 @@ let package = Package(
             name: "PuasaMenubar",
             dependencies: [],
             path: "PuasaMenubar",
-            exclude: ["Assets.xcassets", "PuasaMenubar.entitlements", "Info.plist"],
+            exclude: ["PuasaMenubar.entitlements", "Info.plist"],
             sources: [
                 "PuasaMenubarApp.swift",
                 "ContentView.swift",
@@ -33,6 +33,9 @@ let package = Package(
                 "Views/MenuBarExtra.swift",
                 "Views/PrayerTimeRow.swift",
                 "Views/PrayerTimesView.swift"
+            ],
+            resources: [
+                .process("Assets.xcassets")
             ]
         ),
     ]

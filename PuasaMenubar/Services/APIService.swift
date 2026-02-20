@@ -52,7 +52,7 @@ class APIService {
         urlComponents.queryItems = [
             URLQueryItem(name: "latitude", value: String(latitude)),
             URLQueryItem(name: "longitude", value: String(longitude)),
-            URLQueryItem(name: "method", value: "2"),
+            URLQueryItem(name: "method", value: "8"),
             URLQueryItem(name: "school", value: "0"),
             URLQueryItem(name: "adjustment", value: "1"),
             URLQueryItem(name: "timezonestring", value: "Asia/Jakarta")
@@ -125,7 +125,7 @@ class APIService {
         urlComponents.queryItems = [
             URLQueryItem(name: "city", value: city),
             URLQueryItem(name: "country", value: country),
-            URLQueryItem(name: "method", value: "2"),
+            URLQueryItem(name: "method", value: "8"),
             URLQueryItem(name: "timezonestring", value: "Asia/Jakarta")
         ]
         

@@ -65,23 +65,23 @@ class NotificationService: NSObject, ObservableObject {
     }
     
     // MARK: - Send Notification
-    
+
     func sendPrayerNotification(prayerName: String, prayerTime: String) {
         let icon = prayerIcons[prayerName] ?? "🕌"
-        
+
         let content = UNMutableNotificationContent()
         content.title = "Prayer Time: \(prayerName) \(icon)"
         content.body = "It's time for \(prayerName) prayer (\(prayerTime))"
-        content.sound = .default
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("default"))
         content.categoryIdentifier = "prayer_time"
         content.threadIdentifier = "prayer_times"
-        
+
         let request = UNNotificationRequest(
             identifier: "prayer_\(prayerName)_\(Date().timeIntervalSince1970)",
             content: content,
             trigger: nil // Immediate
         )
-        
+
         center.add(request) { error in
             if let error = error {
                 print("Error scheduling notification: \(error)")
@@ -131,7 +131,7 @@ class NotificationService: NSObject, ObservableObject {
         let content = UNMutableNotificationContent()
         content.title = "Prayer Time: \(prayer.name) \(icon)"
         content.body = "It's time for \(prayer.name) prayer"
-        content.sound = .default
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("default"))
         content.categoryIdentifier = "prayer_time"
         content.threadIdentifier = "prayer_times"
         

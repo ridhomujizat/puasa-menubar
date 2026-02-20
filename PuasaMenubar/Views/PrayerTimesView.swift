@@ -9,7 +9,7 @@ struct PrayerTimesView: View {
         NavigationView {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.ramadanGreenLight, Color.ramadanGreen.opacity(0.05)]),
+                    gradient: Gradient(colors: [Color.ramadanGreenLight, Color.ramadanGreen.opacity(0.03)]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
@@ -22,7 +22,7 @@ struct PrayerTimesView: View {
                     }
                 }
                 .padding()
-                .background(.thinMaterial)
+                .background(.ultraThinMaterial)
             }
             .navigationTitle("Prayer Times")
             .toolbar {
@@ -99,7 +99,7 @@ struct PrayerTimesView: View {
             }
         }
         .padding()
-        .background(.thinMaterial)
+        .background(.ultraThinMaterial)
         .cornerRadius(12)
         .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
     }
@@ -124,7 +124,7 @@ struct PrayerTimesView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(.thinMaterial)
+        .background(.ultraThinMaterial)
         .cornerRadius(16)
     }
     
@@ -149,7 +149,7 @@ struct PrayerTimesView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(.thinMaterial)
+                .background(.ultraThinMaterial)
                 .cornerRadius(12)
             }
         }
@@ -249,7 +249,7 @@ struct ErrorView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(.thinMaterial)
+        .background(.ultraThinMaterial)
         .cornerRadius(12)
     }
 }

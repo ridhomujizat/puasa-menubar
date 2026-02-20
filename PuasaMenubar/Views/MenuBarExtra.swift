@@ -25,7 +25,7 @@ struct MenuBarExtraView: View {
             }
         }
         .frame(width: 300)
-        .background(.thinMaterial)
+        .background(.ultraThinMaterial)
         .tint(.ramadanGreen)
         .onAppear(perform: setupLocation)
         .onChange(of: locationManager.location) { _, newLocation in
@@ -145,7 +145,7 @@ private struct NextPrayerCard: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
-        .background(Color.ramadanGreen.opacity(0.08), in: .rect(cornerRadius: 12))
+        .background(Color.ramadanGreen.opacity(0.06), in: .rect(cornerRadius: 12))
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
     }
@@ -180,7 +180,7 @@ private struct PrayerRow: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 6)
-        .background(Color.ramadanGreen.opacity(isNext ? 0.04 : 0), in: .rect(cornerRadius: 8))
+        .background(Color.ramadanGreen.opacity(isNext ? 0.03 : 0), in: .rect(cornerRadius: 8))
         .padding(.horizontal, 8)
         .animation(.easeInOut(duration: 0.2), value: isNext)
     }
@@ -243,7 +243,7 @@ private struct NotificationSettingsView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
-        .background(Color.ramadanGreen.opacity(0.04), in: .rect(cornerRadius: 8))
+        .background(Color.ramadanGreen.opacity(0.03), in: .rect(cornerRadius: 8))
         .padding(.horizontal, 16)
         .padding(.bottom, 6)
     }

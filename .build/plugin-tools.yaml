@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "PuasaMenubar-arm64-apple-macosx26.0-debug.exe": ["<PuasaMenubar-arm64-apple-macosx26.0-debug.exe>"]
+  "PuasaMenubar-arm64-apple-macosx26.0-debug.module": ["<PuasaMenubar-arm64-apple-macosx26.0-debug.module>"]
+  "main": ["<PuasaMenubar-arm64-apple-macosx26.0-debug.exe>","<PuasaMenubar-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<PuasaMenubar-arm64-apple-macosx26.0-debug.exe>","<PuasaMenubar-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar":
+    is-mutated: true
+commands:
+  "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar-entitlement.plist"]
+    description: "Write auxiliary file /Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar-entitlement.plist"
+
+  "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/ContentView.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Models/PrayerTimesModel.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/PuasaMenubarApp.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/APIService.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/LocationManager.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/MenuBarExtra.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/PrayerTimeRow.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/PrayerTimesView.swift"]
+    outputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/sources"]
+    description: "Write auxiliary file /Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/sources"
+
+  "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/APIService.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/ContentView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimeRow.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PuasaMenubarApp.swift.o"]
+    outputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.product/Objects.LinkFileList"
+
+  "/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<PuasaMenubar-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<PuasaMenubar-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<PuasaMenubar-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<PuasaMenubar-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/ContentView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PuasaMenubarApp.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/APIService.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimeRow.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/Modules/PuasaMenubar.swiftmodule"]
+    outputs: ["<PuasaMenubar-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.PuasaMenubar-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/APIService.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/ContentView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimeRow.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PuasaMenubarApp.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.product/Objects.LinkFileList"]
+    outputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/PuasaMenubar"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug","-o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar","-module-name","PuasaMenubar","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_PuasaMenubar_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/Modules/PuasaMenubar.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.PuasaMenubar-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar-entitlement.plist"]
+    outputs: ["<PuasaMenubar-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/PuasaMenubar"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar-entitlement.plist","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar"]
+
+  "C.PuasaMenubar-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/ContentView.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Models/PrayerTimesModel.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/PuasaMenubarApp.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/APIService.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/LocationManager.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Services/PrayerTimesViewModel.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/MenuBarExtra.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/PrayerTimeRow.swift","/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/Views/PrayerTimesView.swift","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/sources"]
+    outputs: ["/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/ContentView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PuasaMenubarApp.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/APIService.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/LocationManager.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesViewModel.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/MenuBarExtra.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimeRow.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/PrayerTimesView.swift.o","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/Modules/PuasaMenubar.swiftmodule"]
+    description: "Compiling Swift Module 'PuasaMenubar' (9 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","PuasaMenubar","-emit-dependencies","-emit-module","-emit-module-path","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/Modules/PuasaMenubar.swiftmodule","-output-file-map","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/output-file-map.json","-incremental","-c","@/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/PuasaMenubar.build/sources","-I","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/ridho/project/swift/puasa-menubar/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","PuasaMenubar_main","-color-diagnostics","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","puasa_menubar"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/ridho/project/swift/puasa-menubar/PuasaMenubar/","/Users/ridho/project/swift/puasa-menubar/Package.swift","/Users/ridho/project/swift/puasa-menubar/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

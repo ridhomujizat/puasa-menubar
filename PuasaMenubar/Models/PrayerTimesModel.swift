@@ -104,6 +104,9 @@ struct HijriDate: Codable {
     let month: MonthInfo
     let year: String
     let designation: Designation
+    let holidays: [String]?
+    let adjustedHolidays: [String]?
+    let method: String?
 }
 
 struct GregorianDate: Codable {
@@ -114,6 +117,7 @@ struct GregorianDate: Codable {
     let month: GregorianMonthInfo
     let year: String
     let designation: Designation
+    let lunarSighting: Bool?
 }
 
 struct WeekdayInfo: Codable {
@@ -154,11 +158,17 @@ struct Method: Codable {
     let id: Int
     let name: String
     let params: MethodParams
+    let location: LocationInfo?
 }
 
 struct MethodParams: Codable {
     let Fajr: Double
-    let Isha: Double
+    let Isha: String
+}
+
+struct LocationInfo: Codable {
+    let latitude: Double
+    let longitude: Double
 }
 
 struct Offset: Codable {
